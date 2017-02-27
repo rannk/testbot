@@ -1,5 +1,4 @@
 .idea
 .settings
 .project
-tests/api.suite.yml
-tests/phpbrowser.suite.yml
+tests/selenium.suite.yml
