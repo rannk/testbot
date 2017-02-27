@@ -1,0 +1,10 @@
+<?php
+$scenario->group('editor');
+$scenario->group('link');
+
+$I = new SeleniumGuy($scenario);
+$elements = ElementsAliasesPage::basicPostElementsXpath();
+
+$I->wantTo('Clean all data generated in testing.');;
+CommonLogin::logMeIn($I, '/clean-test-data');
+$I->waitForText('/async/progress/', 30);

@@ -1,0 +1,7 @@
+.idea
+.settings
+.project
+application/config/config.php
+data_cache
+_make_ci_fcc.php
+CI_fun_code_completion.php

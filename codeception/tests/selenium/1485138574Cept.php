@@ -1,0 +1,12 @@
+<?php $I = new SeleniumGuy($scenario);$I->expect("step id is 1");
+$I->amOnUrl("http://www.baidu.com");
+$I->expect("step id is 2");
+$I->canSee("我的关注");
+$I->expect("step id is 3");
+$I->fillField("#kw", "百度");
+$I->expect("step id is 4");
+$I->click("百度一下");
+$I->expect("step id is 2");
+$I->canSee("我的关注");
+$I->expect("step id is 5");
+$I->wait("1");

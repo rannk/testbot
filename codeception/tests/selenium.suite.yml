@@ -1,0 +1,23 @@
+class_name: SeleniumGuy
+modules:
+    enabled:
+        - WebDriver
+        - SeleniumHelper
+    config:
+        WebDriver:
+            url: 'http://www.baidu.com'
+            browser: chrome
+            capabilties:
+            wait: 0
+            window_size: 1200x600
+            unexpectedAlertBehaviour: 'accept'
+            host: 192.168.96.105
+            port: 4444
+
+env:
+    _ENV_:
+         modules:
+            config:
+                WebDriver:
+                    url: '_ENV_URL_'
+                    browser: _ENV_BROWSER_

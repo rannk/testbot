@@ -1,0 +1,1 @@
+{"appid":"101322309","appkey":"08e7b7a59a7c2281ae0efbfc8538dbd0","callback":"http://www.quandnet.com/login/qq_callback","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

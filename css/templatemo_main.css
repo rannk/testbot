@@ -1,0 +1,373 @@
+/* 
+
+Dashboard Template 
+http://www.templatemo.com/preview/templatemo_415_dashboard
+
+    1. CSS Imports
+    2. General Styles
+    3. Sidebar
+    4. Charts
+    5. Preferences form
+    6. Sign in form
+    7. tables.html
+    8. Bootstrap overrides
+    9. Maps
+    10. Media Queries
+	
+--------------------------------------- */
+
+/* 1. CSS Imports
+--------------------------------------- */
+
+@import url(font-awesome.min.css);
+@import url(bootstrap.min.css);
+
+/* 2. General Styles
+--------------------------------------- */
+* { font-family: arial rounded mt bold, arial, helvetica, sans serif;}
+body { background-color: rgb(235,235,235); font-size: 13px;}
+h1 { font-size: 24px; }
+h3 {font-size: 20px; font-weight: bold; width: 100%}
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+.logo { display: inline-block;}
+.logo h1 {
+    font-size: 24px;
+    margin: 10px 15px;
+}
+.login_info {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    margin: 15px 15px;
+}
+.templatemo-content-wrapper {
+    float: left;
+    width: 100%;
+}
+.templatemo-content {
+    margin-left: 235px;
+    margin-top: 0px;
+    min-height: 600px;
+    padding: 25px 20px 0 20px;
+    background-color: white;
+    overflow-x: hidden;
+}
+.templatemo-footer {
+    clear: both;
+    font-size: 13px;
+    padding: 8px 0 5px 0;
+    text-align: center;
+    color: #ccc;
+    background-color: #333;
+}
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+
+.small-font {
+    font-size: 12px;
+}
+
+.mod-header {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEQ5RDgxQzc2RjQ5MTFFMjhEMUNENzFGRUMwRjhBRTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEQ5RDgxQzg2RjQ5MTFFMjhEMUNENzFGRUMwRjhBRTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0RDlEODFDNTZGNDkxMUUyOEQxQ0Q3MUZFQzBGOEFFNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0RDlEODFDNjZGNDkxMUUyOEQxQ0Q3MUZFQzBGOEFFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvXFWFAAAAAYSURBVHjaYvj//z8D0/Pnz/8zgFgAAQYAS5UJscReGMIAAAAASUVORK5CYII=) repeat-x scroll 0 10px;
+    margin-bottom: 10px;
+}
+.mod-header span {
+    background-color: #ffffff;
+    padding-right: 10px;
+    font-weight:bold;
+}
+
+#task_detail_content div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#task_detail_content .title {
+    color: #8c8c8c;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 80px;
+    display: inline-block;
+}
+
+.flag_auto {
+    color: orangered;
+}
+
+#steps_test_content .desc {
+    color: #8c8c8c;
+    font-size: 13px;
+}
+
+#dashboard_content .date {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#dashboard_content .fa {
+    color: darkorange;
+}
+
+#mentions_content .avatar {
+    width: 40px;
+    float: left;
+}
+#mentions_content .avatar img {
+    width: 30px;
+}
+#mentions_content .message {
+    float: left;
+ }
+#mentions_content .author {
+    color: #0081c2;
+    font-weight: bold;
+}
+#mentions_content .title {
+    color: #0081c2;
+}
+#mentions_content .time {
+    color: #8c8c8c;
+}
+
+#comments .content {
+    min-height: 50px;
+    width: 100%;
+}
+
+.editable form {
+    position: absolute;
+}
+
+.editable form input{
+    height: 25px !important;
+ }
+
+.editable form .btn{
+    position: relative;
+    z-index: 1;
+}
+
+
+.editable-title form,.editable-textarea form {
+    padding: 0px 16px;
+}
+.editable-title form input {
+    height: 30px !important;
+}
+
+.font_up {
+    text-transform:uppercase;
+}
+/** editable field*/
+.editable-field {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: box-shadow 150ms ease-in 0ms;
+    transition: box-shadow 150ms ease-in 0ms;
+    border-radius: 2.01px;
+    cursor: text;
+    display: inline-block;
+    max-width: 100%;
+    box-shadow: 0 0 0 0 transparent;
+    padding: 2px 30px 2px 5px;
+    position: relative;
+    vertical-align: top;
+    word-break: break-word;
+}
+.editable-field .fa {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 0;
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    border-left: 1px solid #ccc;
+    bottom: 0;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 4px;
+    padding-left: 4px;
+    width: 24px;
+    z-index: -1;
+    font-size: 14px;
+}
+.editable-field:hover,.editable-field.saving {
+    box-shadow: 0 0 0 1px #ccc;
+}
+.editable-field:hover .fa {
+    opacity: 1;
+    z-index: auto
+}
+
+
+/* 3. Sidebar
+------------------------------------------------------*/
+#templatemo_search_box {
+    width: 150px;
+    display: inline-block;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.navbar-header { color: rgb(127,127,127); }
+.templatemo-sidebar {
+    padding: 0;
+    margin-top: 20px;
+}
+.templatemo-sidebar .templatemo-sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li > a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0px;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;    
+}
+.templatemo-sidebar-menu a { color: black; }
+.templatemo-sidebar-menu a:hover { text-decoration: none; }
+.templatemo-sidebar-menu li.sub .templatemo-submenu { display: none; }
+.templatemo-sidebar-menu li.sub.open .templatemo-submenu { display: block; }
+.templatemo-submenu { padding-left: 0; }
+.templatemo-submenu li {
+    list-style: none;
+    background-color: #DFDFDF;
+}
+.templatemo-submenu li a {
+    display: block;
+    padding: 20px 15px;
+    margin: 0;
+}
+.templatemo-sidebar-menu > li.sub.open > a {
+    background-color: rgba(145,145,145,0.3);
+}
+.templatemo-sidebar .templatemo-sidebar-menu >li.active, .templatemo-sidebar .templatemo-sidebar-menu>li>a:hover {
+    background-color: rgb(191, 232, 167);
+}
+.templatemo-submenu li > a:hover {
+    background-color: rgb(228,228,228);
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li > a > i {
+    font-size: 16px;
+    top: 2px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+
+/* 4. Charts 
+--------------------------------------------*/
+.templatemo-chart-box {
+    display: inline-block;
+    text-align: center;
+    padding: 20px 30px 30px 0;
+}
+
+/* 5. Preferences Form
+------------------------------------------*/
+#templatemo-preferences-form {
+    max-width: 960px;
+    margin-bottom: 30px;
+}
+
+/* 6. Sign in Form 
+--------------------------------------------*/
+.templatemo-signin-form {
+    padding-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* 7. tables.html
+------------------------------------------*/
+#templatemo_sort_btn { margin-bottom: 20px; }
+
+/* 8. Bootstrap overrides
+----------------------------------------------*/
+.nav-pills>li>a, .nav-tabs>li>a, .alert, .progress, .panel, .btn, .panel-group .panel, .form-control, .modal-content, .breadcrumb {
+    border-radius: 0;
+}
+.list-group-item:first-child, .panel-heading {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-control-feedback { right: 15px; }
+
+/* 9. Maps
+------------------------------------------------------*/
+.jqvmap-zoomin, .jqvmap-zoomout {
+    width: 15px;
+    height: 15px;
+}
+.vmap { height: 400px; }
+
+/* 10. Media Queries
+------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+    .templatemo-sidebar {
+        width: 235px;
+        float: left;
+        position: relative;
+        margin-right: -100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .navbar-form {
+        padding: 0;
+        margin-left: 0;
+    }
+    .navbar-header { float: none; }
+    .navbar-toggle { display: block; }
+    .templatemo-sidebar {
+        border-top: 0 !important;
+        margin: 20px;
+    }
+    .templatemo-sidebar.navbar-collapse.collapse {
+        display: none !important;
+    }
+    .templatemo-sidebar.navbar-collapse.in {
+        border-top: 0 !important;
+        margin: 20px;
+        position: relative;
+        overflow: hidden !important;
+        overflow-y: auto !important;
+        display: block !important;
+    }
+    .templatemo-content-wrapper { float: none; }
+    .templatemo-content { margin: 0; }
+}
+@media screen and (max-width: 767px) {
+    .templatemo-chart-box {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,1 @@
+$I = new SeleniumGuy($scenario);\n

@@ -1,0 +1,17 @@
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+		background-color:#E9E9E9;
+		
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+		background-color:#F5F5F5;
+
+      }
+    .nav-list-box {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+}
+
